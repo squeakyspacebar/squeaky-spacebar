@@ -1,7 +1,7 @@
 [[main]]
-  identifier = 'about'
-  name = 'About'
-  url = '/about/'
+  identifier = 'home'
+  name = 'Home'
+  url = '/'
   weight = 1
 [[main]]
   identifier = 'work'
