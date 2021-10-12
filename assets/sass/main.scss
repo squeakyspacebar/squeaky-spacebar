@@ -83,15 +83,17 @@ h1.main-section-heading {
   flex-wrap: wrap;
   font-family: 'Montserrat', 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif;
   gap: 1rem;
-  line-height: 1.4em;
   justify-content: center;
 }
 
 .site-logo {
+  @media (min-width: $screen-md-min) {
+    white-space: nowrap;
+  }
+
   font-size: 2.5rem;
   margin: 0;
   text-align: center;
-  white-space: nowrap;
 }
 
 .site-nav-list {
@@ -105,6 +107,7 @@ h1.main-section-heading {
   font-size: 1.5rem;
   gap: 1rem;
   justify-content: center;
+  line-height: 1em;
   list-style: none;
   padding: 0;
   text-align: center;
