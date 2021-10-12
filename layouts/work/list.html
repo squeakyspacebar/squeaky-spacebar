@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="work-section" id="work">
+  <h1 class="main-section-heading">WORK</h1>
+  <ul class="work-history-list">
+    {{ range (.Pages.ByParam "start_year").Reverse }}
+    <li class="work-history-list-item">
+      <article class="work-card">
+        <header class="work-card-header">
+          <h1 class="work-place">
+            <span class="work-card-header-lead" aria-hidden="true">//</span>
+            {{ .Params.place }}
+          </h1>
+          <span class="work-period">{{ .Params.start_year }}{{ if isset .Params "end_year" }}–{{ .Params.end_year }}{{ end }}</span>
+          <div class="flex-break"></div>
+          <div class="work-position">{{ .Params.position }}</div>
+        </header>
+        <div class="work-card-main">{{ .Content }}</div>
+      </article>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
