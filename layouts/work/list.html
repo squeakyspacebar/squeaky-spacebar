@@ -1,26 +1,31 @@
 {{ define "main" }}
-<section class="work-section" id="work">
-  <h1 class="main-section-heading">WORK</h1>
-  <ul class="work-history-list">
-    {{ range (.Pages.ByParam "start_year").Reverse }}
-    <li class="work-history-list-item">
-      <article class="work-card">
-        <header class="work-card-header">
-          <h1 class="work-place">
-            <span class="work-card-header-lead" aria-hidden="true">//</span>
-            {{ .Params.place }}
-          </h1>
-          <span class="work-period">
-            {{- .Params.start_year -}}
-            {{ if and (isset .Params "end_year") (ne .Params.start_year .Params.end_year) }}–{{ .Params.end_year }}{{ end }}
-          </span>
-          <div class="flex-break"></div>
-          <div class="work-position">{{ .Params.position }}</div>
-        </header>
-        <div class="work-card-main">{{ .Content }}</div>
-      </article>
-    </li>
-    {{ end }}
-  </ul>
+<section class="resume-section" id="resume">
+  <h1 class="main-section-heading">RESUME</h1>
+  <section class="synopsis-section" id="synposis">
+    <p>Full stack developer with extensive experience in individual/small-team environments given high degrees of flexibility and autonomy. I also have a fair amount of experience working remotely and in newly-formed teams (with both greenfield and brownfield projects).</p>
+  </section>
+  <section class="work-section" id="work">
+    <ul class="work-history-list">
+      {{ range (.Pages.ByParam "start_year").Reverse }}
+      <li class="work-history-list-item">
+        <article class="work-card">
+          <header class="work-card-header">
+            <h1 class="work-place">
+              <span class="work-card-header-lead" aria-hidden="true">//</span>
+              {{ .Params.place }}
+            </h1>
+            <span class="work-period">
+              {{- .Params.start_year -}}
+              {{ if and (isset .Params "end_year") (ne .Params.start_year .Params.end_year) }}–{{ .Params.end_year }}{{ end }}
+            </span>
+            <div class="flex-break"></div>
+            <div class="work-position">{{ .Params.position }}</div>
+          </header>
+          <div class="work-card-main">{{ .Content }}</div>
+        </article>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
 </section>
 {{ end }}
