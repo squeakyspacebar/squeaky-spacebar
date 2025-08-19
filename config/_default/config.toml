@@ -1,0 +1,4 @@
+baseURL = 'http://example.org/'
+disableKinds = ['RSS', 'taxonomy', 'taxonomyTerm', 'term', 'sitemap']
+languageCode = 'en-us'
+title = 'Squeaky Spacebar'
