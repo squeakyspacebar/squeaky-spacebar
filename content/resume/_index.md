@@ -1,4 +1,4 @@
 +++
-title = 'Work'
-type = 'work'
+title = 'Resume'
+type = 'resume'
 +++
