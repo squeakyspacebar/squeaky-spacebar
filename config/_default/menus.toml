@@ -4,9 +4,9 @@
   url = '/'
   weight = 1
 [[main]]
-  identifier = 'work'
-  name = 'Work'
-  url = '/work/'
+  identifier = 'resume'
+  name = 'Resume'
+  url = '/resume/'
   weight = 2
 [[main]]
   identifier = 'projects'
