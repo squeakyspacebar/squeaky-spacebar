@@ -10,7 +10,10 @@
             <span class="work-card-header-lead" aria-hidden="true">//</span>
             {{ .Params.place }}
           </h1>
-          <span class="work-period">{{ .Params.start_year }}{{ if isset .Params "end_year" }}–{{ .Params.end_year }}{{ end }}</span>
+          <span class="work-period">
+            {{- .Params.start_year -}}
+            {{ if and (isset .Params "end_year") (ne .Params.start_year .Params.end_year) }}–{{ .Params.end_year }}{{ end }}
+          </span>
           <div class="flex-break"></div>
           <div class="work-position">{{ .Params.position }}</div>
         </header>

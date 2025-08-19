@@ -1,15 +1,16 @@
 +++
-place = 'Dallas Morning News (DMN)'
-position = 'Software Developer'
+place = 'The Dallas Morning News (DMN)'
+position = 'Full Stack Developer'
 start_year = '2019'
 end_year = '2020'
 +++
 <p>At the <a href="https://www.dallasnews.com/news/">Dallas Morning News</a>, I primarily worked on building LocalGraf, a graph-based knowledge system backed by AWS Neptune and GraphQL intended to power features across the DMN website. I designed and wrote much of the fundamental software for LocalGraf.</p>
 <ul>
-  <li>Wrote an object graph mapper (OGM) library called Mogwai that generated the necessary Gremlin queries to talk to AWS Neptune.</li>
-  <li>Wrote a library called Pegasis that parsed an object schema as a set of GraphQL type definitions, dynamically generated out the entire expanded GraphQL query/mutation schema that actually defined the operational API, attached the proper Mogwai handler functions to the generated endpoints, and stood up the API server. It basically dynamically generated the entire API. Generating from a set of GraphQL schema definition files allowed other, more front end oriented developers easily submit their own schema modifications via PR review with little necessary training.</li>
-  <li>Managed implementation, ETL, and data quality for a number of additional features that utilized LocalGraf including the <a href="https://www.dallasnews.com/sponsored/giving-guide/">North Texas Giving Guide</a>, <a href="https://www.dallasnews.com/business/top-100/">Top 100 Places to Work</a>, and <a href="https://www.dallasnews.com/school-guide/">School Guide</a>.</li>
-  <li>Assisted in creating/maintaining various front end React components for the main DMN website, mostly centered around <a href="https://www.dallasnews.com/arts-entertainment/things-to-do/">Things to Do</a> event search functionality since it tied heavily into LocalGraf.</li>
-  <li>Helped address the challenges arising from the rabbit-hole that is searching scheduled events by date.</li>
-  <li>Discovered just what kind of developer nightmare the Washington Post's Arc Publishing platform is.</li>
+  <li>Built core software (in Node) for an internal knowledge graph system (called LocalGraf) utilizing Amazon Neptune and Elasticsearch.</li>
+  <li>Wrote a preprocessor (called Pegasis) that dynamically generated the entire LocalGraf GraphQL API, creating the GraphQL query/mutation endpoint definitions, their handler functions, and standing up the API server, using GraphQL as a DDL (data definition language). Using Pegasis in combination with GraphQL files for defining the data model allowed less back-end-oriented developers to submit schema modifications for review via PR with minimal additional training.</li>
+  <li>Wrote a basic OGM (object-graph mapping) library (called Mogwai) that generated Gremlin queries and facilitated communication between Amazon Neptune and JavaScript applications (i.e. Pegasis).</li>
+  <li>Helped develop and maintain LocalGraf's supporting systems such as the administrative interface and AWS infrastructure.</li>
+  <li>Managed implementation, ETL (Extract, Transform, Load), and data quality for a number of content features that utilized LocalGraf including the <a href="https://www.dallasnews.com/sponsored/giving-guide/">North Texas Giving Guide</a>, <a href="https://www.dallasnews.com/business/top-100/">Top 100 Places to Work</a>, and <a href="https://www.dallasnews.com/school-guide/">School Guide</a>.</li>
+  <li>Assisted in migrating the main website from a custom CMS to WaPo's (React-based) Arc Fusion platform as part of the dallasnews.com relaunch.</li>
+  <li>Assisted in developing React components for the DMN website, often centered around <a href="https://www.dallasnews.com/arts-entertainment/things-to-do/">Things to Do</a> event search functionality since it tied heavily into LocalGraf.</li>
 </ul>
