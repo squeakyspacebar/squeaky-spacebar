@@ -5,7 +5,7 @@
   weight = 1
 [[main]]
   identifier = 'resume'
-  name = 'Resume'
+  name = 'Résumé'
   url = '/resume/'
   weight = 2
 [[main]]
@@ -13,13 +13,3 @@
   name = 'Projects'
   url = '/projects/'
   weight = 3
-[[main]]
-  identifier = 'unity'
-  name = 'Unity'
-  url = '/unity/'
-  weight = 4
-[[main]]
-  identifier = 'contact'
-  name = 'Contact'
-  url = '/contact/'
-  weight = 5

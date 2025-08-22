@@ -1,15 +1,19 @@
 +++
 place = 'Wonolo'
-position = 'Senior Software Engineer, Build and Release Tools (Build Engineering)'
+position = 'Senior Software Engineer, Build and Release Tools'
 start_year = 2022
 end_year = 2023
 +++
-<p>Inaugural member of a newly formed Build and Release Tools (i.e. Build/Release Engineering) along with the team lead. The team’s purview was maintaining and improving software build and release practices, involving an equal mix of navigating both human (interpersonal/cross-team) and technological challenges toward solutions.</p>
+<p>I joined Wonolo as an inaugural member of the newly-formed Build and Release Tools team. At the intersection of <b>build and release engineering</b>, <b>platform engineering</b>, and <b>DevOps</b>, our team’s purview was maintaining and improving the tooling and processes that assisted developers in releasing software more rapidly and more safely.</p>
 <ul>
-  <li>Designed and implemented a tool in Ruby (called Arborist) to assist with a department-wide code ownership initiative. Arborist generated code ownership trees (for a given repository) from multiple sources of truth, reconciled them into a single tree, and generated a canonical CODEOWNERS file (GitHub), which served as a mapping of a repository’s files to the GitHub team(s) that owned them.</li>
-  <li>Implemented a service in Node.js that generated recommendations for pull request reviewers based on data from the repository’s CODEOWNERS file and other custom criteria. The service integrated with configured GitHub repositories and published recommendation reports as comments within open pull requests.</li>
-  <li>Helped maintain and improve an internal queue service (with Slack bot interface) in Python that integrated with GitHub and our CI/CD platform to allow developers to collaboratively manage sharing of exclusive deployment resources and support developers in monitoring their builds/deployments.</li>
-  <li>Wrote a lot of unit and integration tests for all of the above.</li>
-  <li>Responsible (as a team member) for stewardship of our CI/CD solution and assisting other teams in utilizing it successfully.</li>
-  <li>Drove and participated in a lot of inter-team discussions about process improvements, best practices, and how our team could help improve developer experience.</li>
+  <li>Responsible for stewardship of our <b>CI/CD</b> solution and assisting other developers in utilizing it successfully.</li>
+  <li>Frequent liaison between CloudOps (i.e. the infrastructure team) and developer teams.</li>
+  <li>Drove and participated in many inter-team discussions to drive best practices, process improvements, and developer experience improvements.</li>
+</ul>
+<h2>Highlights</h2>
+<ul>
+  <li>Designed and implemented a (<b>Ruby</b>) tool for developers to formally document code ownership. The tool parsed multiple sources of truth into ownership trees consisting of files and code objects, reconciled and grafted them into a singular tree, and generated a canonical CODEOWNERS file for GitHub to resolve code ownership.</li>
+  <li>Designed and implemented a (<b>Node.js</b>) service that generated recommendations for pull request reviewers to invite based on data from a GitHub repository’s CODEOWNERS file and other custom criteria. The service integrated with any configured GitHub repositories and published recommendation reports as comments on open pull requests.</li>
+  <li>Maintained and improved an internal (<b>Python</b>) deployment queue service — integrated between GitHub, Slack, and our CI/CD platform — to assist developers in collaboratively managing builds/deployments. The service handled locking of exclusive deployment resources as well as provided monitoring feedback to inform developers of pipeline progress. Developers interacted with the service through a Slackbot, allowing them to manage deployments with a minimum of additional panel-watching.</li>
+  <li>Wrote many <b>unit and integration tests</b> for all of the above projects.</li>
 </ul>

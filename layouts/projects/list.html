@@ -1,41 +1,43 @@
-{{ define "main" }}
+{{- define "main" -}}
 <section class="projects-section" id="projects">
+  <p>Please visit my <a href="https://assetstore.unity.com/publishers/56631">Unity Asset Store Publisher Page</a> for product and contact information.</p>
   <h1 class="main-section-heading">PROJECTS</h1>
   <ul class="projects-list">
-    {{ range (.Pages.ByParam "start_year").Reverse }}
+    {{- range (.Pages.ByParam "start_year").Reverse -}}
     <li class="projects-list-item">
       <article class="project-card">
-        {{ if isset .Params "project_thumbnail" }}
+        {{- if isset .Params "project_thumbnail" -}}
         {{- $image := resources.Get .Params.project_thumbnail -}}
-        {{ $image := $image.Resize "256x" }}
+        {{- $image := $image.Resize "256x" -}}
         <div class="project-card-thumbnail-wrapper">
-          {{ if isset .Params "project_url" }}
+          {{- if isset .Params "project_url" -}}
           <a href="{{ .Params.project_url }}">
-            <img class="project-card-thumbnail" src="{{ $image.RelPermalink }}">
+            <img class="project-card-thumbnail" src="{{ $image.RelPermalink }}" alt="Project thumbnail">
           </a>
-          {{ else }}
-          <img class="project-card-thumbnail" src="{{ $image.RelPermalink }}">
-          {{ end }}
+          {{- else -}}
+          <img class="project-card-thumbnail" src="{{ $image.RelPermalink }}" alt="Project thumbnail">
+          {{- end -}}
         </div>
-        {{ end }}
+        {{- end -}}
         <div class="project-card-body-wrapper">
           <header class="project-card-header">
             <h1 class="project-name">
-              {{ if isset .Params "project_url" }}
+              <span class="project-name-lead" aria-hidden="true">//</span>
+              {{- if isset .Params "project_url" -}}
               <a href="{{ .Params.project_url }}">{{- .Params.project_name -}}</a>
-              {{ else }}
+              {{- else -}}
               {{- .Params.project_name -}}
-              {{ end }}
+              {{- end -}}
             </h1>
             {{- if isset .Params "start_year" -}}
-            <span class="project-period">{{- .Params.start_year -}}{{ if isset .Params "end_year" }}–{{- .Params.end_year -}}{{ end }}</span>
-            {{ end }}
+            <span class="project-period">{{- .Params.start_year -}}{{- if isset .Params "end_year" -}}–{{- .Params.end_year -}}{{- end -}}</span>
+            {{- end -}}
           </header>
-          <div class="project-card-main">{{- .Content -}}</div>
+          <div class="project-card-body">{{- .Content -}}</div>
         </div>
       </article>
     </li>
-    {{ end }}
+    {{- end -}}
   </ul>
 </section>
-{{ end }}
+{{- end -}}

@@ -1,15 +1,15 @@
-<nav class="site-nav" role="navigation">
-  {{ $currentPage := . }}
+<nav class="site-nav">
+  {{- $currentPage := . -}}
   <ul class="site-nav-list">
-    {{ range $index, $link := .Site.Menus.main }}
-    {{ if ne $index 0 }}
+    {{- range $index, $link := .Site.Menus.main -}}
+    {{- if ne $index 0 -}}
     <li class="site-nav-list-item" role="separator">
-      <span class="site-nav-divider">/</span>
+      <span class="site-nav-divider">//</span>
     </li>
-    {{ end }}
+    {{- end -}}
     <li class="site-nav-list-item">
-      <a class="site-nav-link{{ if eq $currentPage.RelPermalink .URL }} active{{end}}" href="{{ $link.URL }}">{{ $link.Name | upper }}</a>
+      <a class="site-nav-link{{ if eq $currentPage.RelPermalink .URL }} active{{end}}" href="{{ $link.URL }}">{{- $link.Name | upper -}}</a>
     </li>
-    {{ end }}
+    {{- end -}}
   </ul>
 </nav>

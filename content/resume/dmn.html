@@ -4,13 +4,14 @@ position = 'Full Stack Developer'
 start_year = '2019'
 end_year = '2020'
 +++
-<p>At the <a href="https://www.dallasnews.com/news/">Dallas Morning News</a>, I primarily worked on building LocalGraf, a graph-based knowledge system backed by AWS Neptune and GraphQL intended to power features across the DMN website. I designed and wrote much of the fundamental software for LocalGraf.</p>
+<p>I joined the <a href="https://www.dallasnews.com/news/">Dallas Morning News</a> as an inaugural member of their new in-house developer team, where I primarily worked on designing and building a graph-based knowledge system — using <a href="https://aws.amazon.com/neptune/"><b>Amazon Neptune</b></a>, <a href="https://www.elastic.co/elasticsearch"><b>Elasticsearch</b></a>, and <a href="https://graphql.org/"><b>GraphQL</b></a> — for powering features across the DMN website.</p>
+<h2>Highlights</h2>
 <ul>
-  <li>Built core software (in Node) for an internal knowledge graph system (called LocalGraf) utilizing Amazon Neptune and Elasticsearch.</li>
-  <li>Wrote a preprocessor (called Pegasis) that dynamically generated the entire LocalGraf GraphQL API, creating the GraphQL query/mutation endpoint definitions, their handler functions, and standing up the API server, using GraphQL as a DDL (data definition language). Using Pegasis in combination with GraphQL files for defining the data model allowed less back-end-oriented developers to submit schema modifications for review via PR with minimal additional training.</li>
-  <li>Wrote a basic OGM (object-graph mapping) library (called Mogwai) that generated Gremlin queries and facilitated communication between Amazon Neptune and JavaScript applications (i.e. Pegasis).</li>
-  <li>Helped develop and maintain LocalGraf's supporting systems such as the administrative interface and AWS infrastructure.</li>
-  <li>Managed implementation, ETL (Extract, Transform, Load), and data quality for a number of content features that utilized LocalGraf including the <a href="https://www.dallasnews.com/sponsored/giving-guide/">North Texas Giving Guide</a>, <a href="https://www.dallasnews.com/business/top-100/">Top 100 Places to Work</a>, and <a href="https://www.dallasnews.com/school-guide/">School Guide</a>.</li>
-  <li>Assisted in migrating the main website from a custom CMS to WaPo's (React-based) Arc Fusion platform as part of the dallasnews.com relaunch.</li>
-  <li>Assisted in developing React components for the DMN website, often centered around <a href="https://www.dallasnews.com/arts-entertainment/things-to-do/">Things to Do</a> event search functionality since it tied heavily into LocalGraf.</li>
+  <li>Built the core software (<b>Node.js</b>) for an internal knowledge graph system backed by Amazon Neptune and Elasticsearch.</li>
+  <li>Wrote an <b>object-graph mapping (OGM)</b> library that generated <a href="https://tinkerpop.apache.org/gremlin.html"><b>Gremlin</b></a> queries (graph traversal language used by Amazon Neptune) for Node.js applications.</li>
+  <li>Wrote a preprocessor tool (Node.js) that dynamically generated the entire definition for the knowledge graph system's GraphQL API and stood up the API server. The tool utilized GraphQL as a DDL (data definition language), allowing less backend-oriented developers to submit updates to the API's data model by simply modifying GraphQL schema definition files, and reducing the load on me in managing API updates.</li>
+  <li>Helped develop and maintain knowledge graph systems such as the administrative interface and AWS infrastructure.</li>
+  <li>Managed implementation, <b>ETL</b>, data cleaning, and data processing for a number of content features that utilized the knowledge graph including the <a href="https://www.dallasnews.com/sponsored/giving-guide/">North Texas Giving Guide</a>, <a href="https://www.dallasnews.com/business/top-100/">Top 100 Places to Work</a>, and <a href="https://www.dallasnews.com/school-guide/">School Guide</a>.</li>
+  <li>Assisted in migrating <a href="https://www.dallasnews.com/">dallasnews.com</a> from a custom CMS onto the Washington Post's Arc Fusion (<a href="https://react.dev/"><b>React</b></a>-based) platform for a site relaunch.</li>
+  <li>Assisted in developing React components for the DMN website, often centered around event search functionality that utilized the knowledge graph system.</li>
 </ul>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "site-header.html" . -}}
-        <main class="site-main" role="main">
-        {{- block "main" . }}{{- end }}
-        </main>
-    </body>
+<html html lang="en-us">
+  {{- partial "head.html" . -}}
+  <body>
+    {{- partial "site-header.html" . -}}
+    <main class="site-main">
+      {{- block "main" . -}}{{- end -}}
+    </main>
+  </body>
 </html>
