@@ -58,14 +58,6 @@ body {
 }
 
 a {
-  /*@media (prefers-color-scheme: dark) {
-    color: $off-white;
-
-    &:hover {
-      color: scale-color($off-white, $lightness: -50%);
-    }
-  }*/
-
   color: $smoky-black;
   text-decoration: none;
 
@@ -245,13 +237,6 @@ h1.main-section-heading {
   padding: 2rem;
 }
 
-.about-me-card {
-  /*@media (prefers-color-scheme: dark) {
-    background: $smoky-black;
-    color: $off-white;
-  }*/
-}
-
 .projects-section,
 .resume-section {
   font-size: 1.25rem;
@@ -305,14 +290,6 @@ h1.main-section-heading {
 }
 
 .work-card-body {
-  /*@media (prefers-color-scheme: dark) {
-    background: $smoky-black;
-  }*/
-
-  h2:first-of-type {
-    margin-top: 0;
-  }
-
   h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
