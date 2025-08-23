@@ -51,7 +51,7 @@ html {
 }
 
 body {
-  margin: 0 auto;
+  margin: 0 auto 6rem;
   max-width: $screen-lg-min;
   min-height: 100vh;
   padding: 2rem 3rem;
@@ -241,6 +241,7 @@ h1.main-section-heading {
 .resume-section {
   font-size: 1.25rem;
   font-weight: 200;
+  margin-top: 4rem;
 }
 
 .projects-list,
