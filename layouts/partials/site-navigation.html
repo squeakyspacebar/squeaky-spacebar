@@ -8,7 +8,7 @@
     </li>
     {{- end -}}
     <li class="site-nav-list-item">
-      <a class="site-nav-link{{ if eq $currentPage.RelPermalink .URL }} active{{end}}" href="{{ $link.URL }}">{{- $link.Name | upper -}}</a>
+      <a class="site-nav-link{{ if eq $currentPage.RelPermalink .URL }} active{{ end }}" href="{{ $link.URL }}">{{- $link.Name | upper -}}</a>
     </li>
     {{- end -}}
   </ul>

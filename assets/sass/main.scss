@@ -1,6 +1,7 @@
-$screen-md-min: 600px;
-$screen-md-lg-min: 900px;
-$screen-lg-min: 1200px;
+$screen-sm-min: 481px;
+$screen-md-min: 769px;
+$screen-md-lg-min: 993px;
+$screen-lg-min: 1201px;
 
 $alabaster-white: rgb(250, 250, 250); // #fafafa
 $off-white: rgb(240, 240, 240); // #f0f0f0
@@ -19,13 +20,13 @@ $titanium-yellow: rgb(240, 224, 0); // #f0e000
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
 
-/* inconsolata-latin-400-normal */
+/* open-sans-latin-wght-normal */
 @font-face {
-  font-family: 'Inconsolata';
+  font-family: 'Open Sans Variable';
   font-style: normal;
   font-display: swap;
-  font-weight: 400;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/inconsolata@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/inconsolata@latest/latin-400-normal.woff) format('woff');
+  font-weight: 300 800;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/open-sans:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
 
@@ -59,23 +60,11 @@ body {
 }
 
 main {
-  font-family: 'Inter Variable', 'Open Sans';
-}
+  font-family: 'Inter Variable', 'Open Sans Variable';
 
-footer {
-  @media (min-width: $screen-md-min) {
-    font-size: 1.25rem;
-    margin-top: 6rem;
-    padding: 0 2rem;
+  a {
+    text-decoration: underline;
   }
-
-  background: $light-gray;
-  border-radius: 0.5rem;
-  display: flex;
-  font-weight: 300;
-  justify-content: space-between;
-  margin-top: 2rem;
-  padding: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -91,12 +80,6 @@ a {
   }
 }
 
-p {
-  a {
-    text-decoration: underline;
-  }
-}
-
 .no-display {
   display: none;
 }
@@ -104,80 +87,6 @@ p {
 .flex-break {
   flex-basis: 100%;
   height: 0;
-}
-
-.site-header {
-  @media (min-width: $screen-md-lg-min) {
-    justify-content: space-between;
-  }
-
-  align-items: baseline;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-  justify-content: center;
-}
-
-.site-logo {
-  @media (min-width: $screen-md-min) {
-    font-size: 2.5rem;
-    white-space: nowrap;
-  }
-
-  @media (min-width: $screen-md-min) and (max-width: $screen-md-lg-min) {
-    flex-basis: 100%;
-    text-align: center;
-  }
-
-  font-size: 1.25rem;
-  margin: 0;
-
-  a {
-    &:hover {
-      color: inherit;
-    }
-  }
-}
-
-.site-nav {
-  @media (min-width: $screen-md-min) {
-    font-size: 1.2rem;
-    line-height: 1.5em;
-  }
-}
-
-.site-nav-list {
-  display: flex;
-  gap: 0.4rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  a.active {
-    text-decoration: underline;
-  }
-}
-
-.site-nav-divider,
-.project-name-lead,
-.work-place-lead {
-  color: $titanium-yellow;
-  font-weight: 700;
-}
-
-.contact-email {
-  @media (min-width: $screen-md-min) {
-    display: inline;
-    flex-basis: 100%;
-    font-size: 1.25rem;
-    text-align: center;
-  }
-
-  @media (min-width: $screen-lg-min) {
-    text-align: left;
-  }
-
-  text-align: center;
 }
 
 .social-link {
@@ -200,6 +109,121 @@ p {
   }
 }
 
+.site-header {
+  @media (min-width: $screen-sm-min) {
+    justify-content: space-between;
+  }
+
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.site-logo {
+  @media (min-width: $screen-sm-min) {
+    font-size: 2rem;
+    white-space: nowrap;
+  }
+
+  @media (min-width: $screen-md-min) {
+    font-size: 2.25rem;
+  }
+
+  @media (min-width: $screen-md-lg-min) {
+    font-size: 2.5rem;
+  }
+
+  font-size: 1.25rem;
+  margin: 0;
+
+  a {
+    &:hover {
+      color: inherit;
+    }
+  }
+}
+
+.site-nav {
+  @media (min-width: $screen-md-min) {
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: $screen-md-lg-min) {
+    font-size: 1.5rem;
+  }
+
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+.site-nav-list {
+  display: flex;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a.active {
+    text-decoration: underline;
+  }
+}
+
+.site-nav-divider,
+.project-name-lead,
+.work-place-lead {
+  color: $titanium-yellow;
+  font-weight: 700;
+}
+
+.contact-email {
+  @media (min-width: $screen-sm-min) {
+    flex-basis: 100%;
+  }
+
+  @media (min-width: $screen-md-min) {
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: $screen-md-lg-min) {
+    font-size: 1.5rem;
+  }
+
+  font-family: 'Inter Variable', 'Open Sans Variable';
+  font-weight: 200;
+}
+
+.site-footer {
+  @media (min-width: $screen-md-min) {
+    font-size: 1.125rem;
+    margin-top: 4rem;
+  }
+
+  @media (min-width: $screen-md-lg-min) {
+    font-size: 1.25rem;
+    margin-top: 6rem;
+  }
+
+  background: $light-gray;
+  border-radius: 0.5em;
+  display: flex;
+  font-weight: 300;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 1em 2em;
+}
+
+.back-to-top {
+  color: $chili-red;
+  text-decoration: underline;
+
+  &:hover {
+    color: scale-color($chili-red, $lightness: 33%);
+  }
+}
+
 .header-section {
   @media (min-width: $screen-md-lg-min) {
     font-size: 1.4rem;
@@ -209,7 +233,7 @@ p {
   display: flex;
   font-weight: 300;
   justify-content: center;
-  min-height: 90vh;
+  min-height: 85vh;
   padding: 0 0 3rem;
   text-align: center;
 
@@ -319,11 +343,17 @@ p {
   font-weight: 200;
 }
 
+.unity-callout {
+  background: $light-gray;
+  border-radius: 0.5em;
+  padding: 1em 2em;
+}
+
 .projects-list,
 .work-history-list {
   list-style: none;
+  margin: 0;
   padding: 0;
-  text-align: left;
 }
 
 .project-card,
@@ -331,19 +361,33 @@ p {
   margin: 1.5rem 0 1.75rem;
 }
 
+.project-card {
+  @media (min-width: $screen-md-min) {
+    flex-wrap: nowrap;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .project-card-header,
 .work-card-header {
   @media (min-width: $screen-md-min) {
-    align-items: baseline;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1.25rem;
+    padding: 1rem 1.5rem;
+  }
+
+  @media (min-width: $screen-md-lg-min) {
+    padding: 1rem 2rem;
   }
 
   background: $light-gray;
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
-  padding: 0.5rem;
+  padding: 1rem;
 
   h1 {
     font-weight: 700;
@@ -352,17 +396,19 @@ p {
 
 .project-card-body,
 .work-card-body {
-  @media (min-width: $screen-lg-min) {
-    line-height: 1.75em;
+  @media (min-width: $screen-md-min) {
+    font-size: 1.125rem;
+    padding: 2rem;
   }
 
   @media (min-width: $screen-md-lg-min) {
+    font-size: 1.25rem;
+    line-height: 1.5em;
     text-align: justify;
   }
 
-  @media (min-width: $screen-md-min) {
-    font-size: 1.25rem;
-    padding: 2rem;
+  @media (min-width: $screen-lg-min) {
+    line-height: 1.75em;
   }
 
   background: $alabaster-white;
@@ -380,10 +426,17 @@ p {
 .work-card-body {
   h2 {
     @media (min-width: $screen-md-min) {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
+      margin: 0.75rem 0;
     }
 
-    font-size: 1.25rem;
+    @media (min-width: $screen-md-lg-min) {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    font-size: 1.125rem;
+    margin: 0.5rem 0;
   }
 
   p:first-of-type {
@@ -391,30 +444,32 @@ p {
   }
 }
 
-.project-card {
-  @media (min-width: $screen-md-min) {
-    flex-wrap: nowrap;
+.project-card-thumbnail-wrapper {
+  @media (min-width: $screen-sm-min) {
+    flex-basis: auto;
   }
 
-  display: flex;
-  flex-wrap: wrap;
+  flex-basis: 100%;
+  padding: 0 1rem;
+  text-align: center;
 }
 
-.project-card-body-wrapper {
+.project-card-main-wrapper {
   @media (min-width: $screen-md-min) {
     margin-left: 3rem;
   }
+
+  flex: 1;
 }
 
 .project-card-thumbnail {
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-sm-min) {
     margin-bottom: 0;
-    max-width: none;
   }
 
   border-radius: 50%;
   margin-bottom: 1.5rem;
-  max-width: 100%;
+  width: 12rem;
 }
 
 .project-name-lead,
@@ -425,7 +480,7 @@ p {
 .project-name,
 .work-place {
   @media (min-width: $screen-md-min) {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   @media (min-width: $screen-md-lg-min) {
@@ -433,12 +488,13 @@ p {
   }
 
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1.25rem;
   margin: 0;
 }
 
 .work-position {
   @media (min-width: $screen-md-min) {
+    font-size: 1.25rem;
     line-height: 1.2em;
   }
 
@@ -448,13 +504,13 @@ p {
   }
 
   font-weight: 200;
-  margin-top: 0.125rem;
+  margin: 0.125rem 0 0;
 }
 
 .project-period,
 .work-period {
   @media (min-width: $screen-md-min) {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 
   @media (min-width: $screen-md-lg-min) {
@@ -464,13 +520,4 @@ p {
   font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-}
-
-.back-to-top {
-  color: $chili-red;
-  transition: all 0.7s linear;
-
-  &:hover {
-    color: scale-color($chili-red, $lightness: 25%);
-  }
 }

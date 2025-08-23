@@ -1,7 +1,6 @@
 {{- define "main" -}}
 <section class="projects-section" id="projects">
-  <p>Please visit my <a href="https://assetstore.unity.com/publishers/56631">Unity Asset Store Publisher Page</a> for product and contact information.</p>
-  <h1 class="main-section-heading">PROJECTS</h1>
+  <div class="unity-callout">Please visit my <a href="https://assetstore.unity.com/publishers/56631">Unity Asset Store Publisher Page</a> for product and contact information.</div>
   <ul class="projects-list">
     {{- range (.Pages.ByParam "start_year").Reverse -}}
     <li class="projects-list-item">
@@ -19,10 +18,9 @@
           {{- end -}}
         </div>
         {{- end -}}
-        <div class="project-card-body-wrapper">
+        <div class="project-card-main-wrapper">
           <header class="project-card-header">
             <h1 class="project-name">
-              <span class="project-name-lead" aria-hidden="true">//</span>
               {{- if isset .Params "project_url" -}}
               <a href="{{ .Params.project_url }}">{{- .Params.project_name -}}</a>
               {{- else -}}
