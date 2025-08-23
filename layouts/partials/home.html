@@ -2,12 +2,10 @@
 <article>
   <div class="header-section-greet">Howdy! I'm</div>
   <div class="header-section-name">ANDY LO</div>
-  <div class="header-section-profile-caption">
-    <span>— THINKER, SKEPTIC, SOFTWARE DEVELOPER —</span>
-  </div>
+  <div class="header-section-profile-caption">— THINKER, SKEPTIC, SOFTWARE DEVELOPER —</div>
   {{- $image := resources.Get "/images/squeakyspacebar-720.png" -}}
   {{- $image := $image.Resize "256x" -}}
-  <img class="header-section-profile-image" src="{{ $image.RelPermalink }}">
+  <img class="header-section-profile-image" src="{{ $image.RelPermalink }}" alt="Profile image">
   <div class="header-section-tagline">I prefer thoughtful and experimental work.</div>
   <a class="social-link" href="https://github.com/squeakyspacebar">{{- partial "fontawesome.html" "github" -}}</a>
 </article>
@@ -15,23 +13,23 @@
 <section class="about-me-section" id="about-me">
   <h1 class="about-me-section-heading">ABOUT ME</h1>
   <section class="about-me-subsection" id="about-me-professionally">
-     <h3>BREADTH OF EXPERIENCE</h3>
+      <h2>BREADTH OF EXPERIENCE</h2>
       <p>I've been a full stack developer since the very beginning of my career. My experience has run the gamut of designing and implementing solutions end-to-end across multiple domains front-to-back.</p>
-      <h3>CONSCIENTIOUSNESS</h3>
+      <h2>CONSCIENTIOUSNESS</h2>
       <p>I seek challenging and meaningful work with opportunities that advance socially positive objectives. I care about craft, discipline, process, and doing things well with an eye toward long-term sustainability, but I am also flexible, anti-dogmatic, mission-driven, and results-oriented.</p>
-      <h3>SELF-SUFFICIENCY</h3>
+      <h2>SELF-SUFFICIENCY</h2>
       <p>I have primarily worked in solo-developer and small-team environments with high degrees of flexibility and autonomy, with plenty of experience working in both newly-formed and remote teams. I value independence, am highly self-motivated, and am comfortable with taking the initiative when empowered to do so.</p>
   </section>
   <section class="about-me-subsection" id="about-me-personally">
-      <h3>WHERE I'M FROM</h3>
+      <h2>WHERE I'M FROM</h2>
       <p>Native Texan born-and-raised.</p>
-      <h3>WHERE I'VE BEEN</h3>
+      <h2>WHERE I'VE BEEN</h2>
       <p>The US, Canada, Australia, Taiwan, Japan, Italy, Austria, Germany, and Iceland.</p>
-      <h3>PHILOSOPHY</h3>
+      <h2>PHILOSOPHY</h2>
       <p>Existentialist, empiricist, skeptic (<a href="https://www.web3isgoinggreat.com/">crypto</a> and AI included), centre-left, non-social media enjoyer.</p>
-      <h3>INTERESTS</h3>
+      <h2>INTERESTS</h2>
       <p>Science, philosophy, international geopolitics, cinema, various things gustatory and culinary. I enjoy the exploratory: that which is simultaneously experimental, yet grounded.</p>
-      <h3>DUMB PERSONALITY STUFF</h3>
+      <h2>DUMB PERSONALITY STUFF</h2>
       <p><a href="https://www.16personalities.com/intp-personality">INTP</a>, Aquarius, Fire Rabbit (火兔), Ravenclaw.</p>
   </div>
 </section>
