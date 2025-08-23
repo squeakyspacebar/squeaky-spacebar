@@ -1,6 +1,7 @@
 $screen-sm-min: 481px;
-$screen-md-min: 769px;
-$screen-md-lg-min: 993px;
+$screen-sm-md-min: 651px;
+$screen-md-min: 791px;
+$screen-md-lg-min: 1001px;
 $screen-lg-min: 1201px;
 
 $alabaster-white: rgb(250, 250, 250); // #fafafa
@@ -49,7 +50,7 @@ html {
 }
 
 body {
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-sm-min) {
     padding: 2rem 3rem;
   }
 
@@ -110,34 +111,37 @@ a {
 }
 
 .site-header {
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: $screen-sm-md-min) {
     justify-content: space-between;
   }
 
   align-items: baseline;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25rem;
+  gap: 0.4em;
   justify-content: center;
   margin-bottom: 2rem;
 }
 
 .site-logo {
-  @media (min-width: $screen-sm-min) {
-    font-size: 2rem;
+  @media (min-width: $screen-sm-md-min) {
+    flex-basis: auto;
+    font-size: 1.75em;
+    text-align: left;
     white-space: nowrap;
   }
 
   @media (min-width: $screen-md-min) {
-    font-size: 2.25rem;
+    font-size: 2.25em;
   }
 
   @media (min-width: $screen-md-lg-min) {
-    font-size: 2.5rem;
+    font-size: 2.75em;
   }
 
-  font-size: 1.25rem;
-  margin: 0;
+  flex-basis: 100%;
+  font-size: 1.25em;  margin: 0;
+  text-align: center;
 
   a {
     &:hover {
@@ -148,11 +152,11 @@ a {
 
 .site-nav {
   @media (min-width: $screen-md-min) {
-    font-size: 1.25rem;
+    font-size: 1.2em;
   }
 
   @media (min-width: $screen-md-lg-min) {
-    font-size: 1.5rem;
+   font-size: 1.4em;
   }
 
   font-weight: 300;
@@ -161,7 +165,7 @@ a {
 
 .site-nav-list {
   display: flex;
-  gap: 0.4rem;
+  gap: 0.4em;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -179,31 +183,42 @@ a {
 }
 
 .contact-email {
-  @media (min-width: $screen-sm-min) {
-    flex-basis: 100%;
+  @media (min-width: $screen-sm-md-min) {
+    text-align: left;
   }
 
   @media (min-width: $screen-md-min) {
-    font-size: 1.25rem;
+    font-size: 1.2em;
   }
 
   @media (min-width: $screen-md-lg-min) {
-    font-size: 1.5rem;
+    font-size: 1.6em;
   }
 
+  flex-basis: 100%;
   font-family: 'Inter Variable', 'Open Sans Variable';
   font-weight: 200;
+  text-align: center;
 }
 
 .site-footer {
+  @media (min-width: $screen-sm-min) {
+    margin-top: 1.75rem;
+  }
+
+  @media (min-width: $screen-sm-md-min) {
+    font-size: 1.125rem;
+    margin-top: 2.5rem;
+  }
+
   @media (min-width: $screen-md-min) {
     font-size: 1.125rem;
-    margin-top: 4rem;
+    margin-top: 3.25rem;
   }
 
   @media (min-width: $screen-md-lg-min) {
     font-size: 1.25rem;
-    margin-top: 6rem;
+    margin-top: 4rem;
   }
 
   background: $light-gray;
@@ -211,31 +226,35 @@ a {
   display: flex;
   font-weight: 300;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 1em 2em;
 }
 
 .back-to-top {
-  color: $chili-red;
+  color: $smoky-black;
   text-decoration: underline;
 
   &:hover {
-    color: scale-color($chili-red, $lightness: 33%);
+    color: scale-color($smoky-black, $lightness: 33%);
   }
 }
 
 .header-section {
+  @media (min-width: $screen-md-min) {
+    font-size: 1.2rem;
+  }
+
   @media (min-width: $screen-md-lg-min) {
     font-size: 1.4rem;
   }
 
   align-items: center;
   display: flex;
+  flex-direction: column;
   font-weight: 300;
   justify-content: center;
   min-height: 85vh;
   padding: 0 0 3rem;
-  text-align: center;
 
   .social-link {
     @media (min-width: $screen-md-min) {
@@ -248,11 +267,21 @@ a {
 }
 
 .header-section-name {
+  @media (min-width: $screen-sm-md-min) {
+    font-size: 3rem;
+    margin: 1rem 0 0;
+  }
+
+  @media (min-width: $screen-md-min) {
+    font-size: 4rem;
+    margin: 1rem 0 0;
+  }
+
   @media (min-width: $screen-md-lg-min) {
     font-size: 5rem;
     margin: 1rem 0 0;
   }
-  
+
   font-size: 2rem;
   font-weight: 900;
   margin: 0.5rem 0 0;
@@ -270,6 +299,18 @@ a {
 }
 
 .header-section-profile-caption {
+  @media (min-width: $screen-sm-min) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: $screen-sm-md-min) {
+    font-size: 1.3rem;
+  }
+
+  @media (min-width: $screen-md-min) {
+    font-size: 1.6rem;
+  }
+
   @media (min-width: $screen-md-lg-min) {
     font-size: 2rem;
   }
@@ -278,8 +319,20 @@ a {
 }
 
 .header-section-tagline {
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-sm-min) {
     font-size: 1rem;
+  }
+
+  @media (min-width: $screen-sm-md-min) {
+    font-size: 1.125rem;
+  }
+
+  @media (min-width: $screen-md-min) {
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: $screen-md-lg-min) {
+    font-size: 1.375rem;
   }
 
   font-size: 0.875rem;
@@ -287,39 +340,82 @@ a {
 }
 
 .about-me-section {
-  @media (min-width: $screen-md-min) {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 1.25rem;
-    gap: 2rem;
+  @media (min-width: $screen-sm-md-min) {
+    font-size: 1.125rem;
   }
 
+  @media (min-width: $screen-md-lg-min) {
+    font-size: 1.25rem;
+  }
+
+  font-size: 1rem;
+
   h1.about-me-section-heading {
-    @media (min-width: $screen-md-min) {
-      flex-basis: 100%;
-      font-size: 3rem;
+    @media (min-width: $screen-sm-min) {
+      font-size: 1.8rem;
+      margin: 0 0 1.75rem;
     }
 
+    @media (min-width: $screen-sm-md-min) {
+      font-size: 2.2rem;
+      margin: 0 0 2.5rem;
+    }
+
+    @media (min-width: $screen-md-min) {
+      font-size: 2.6rem;
+      margin: 0 0 3.25rem;
+    }
+
+    @media (min-width: $screen-md-lg-min) {
+      font-size: 3rem;
+      margin: 0 0 4rem;
+    }
+
+    font-size: 1.4rem;
     margin: 0 0 1rem;
     text-align: center;
   }
 }
 
-.about-me-subsection {
-  @media (min-width: $screen-md-min) {
-    align-items: stretch;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
+.about-me-subsection-wrapper {
+  @media (min-width: $screen-sm-md-min) {
+    gap: 2rem;
   }
 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-me-subsection {
+  @media (min-width: $screen-sm-md-min) {
+    flex-basis: auto;
+    flex: 1;
+  }
+
+  flex-basis: 100%;
   font-weight: 200;
   line-height: 1.5em;
 
   h2 {
+    @media (min-width: $screen-sm-min) {
+      font-size: 1.3rem;
+    }
+
+    @media (min-width: $screen-sm-md-min) {
+      font-size: 1.4rem;
+    }
+
+    @media (min-width: $screen-md-min) {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: $screen-md-lg-min) {
+      font-size: 1.6rem;
+    }
+
     color: $chili-red;
     font-family: 'Manrope';
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     margin: 0;
   }
 }

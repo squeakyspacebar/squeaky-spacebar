@@ -3,7 +3,7 @@
   <ul class="site-nav-list">
     {{- range $index, $link := .Site.Menus.main -}}
     {{- if ne $index 0 -}}
-    <li class="site-nav-list-item" role="separator">
+    <li class="site-nav-list-item" role="separator" aria-hidden="true">
       <span class="site-nav-divider">//</span>
     </li>
     {{- end -}}

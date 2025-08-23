@@ -1,26 +1,25 @@
 <section class="header-section" id="header">
-<article>
   <div class="header-section-greet">Howdy! I'm</div>
   <div class="header-section-name">ANDY LO</div>
   <div class="header-section-profile-caption">—&nbsp;THINKER, SKEPTIC, SOFTWARE DEVELOPER&nbsp;—</div>
   {{- $image := resources.Get "/images/squeakyspacebar-720.png" -}}
   {{- $image := $image.Resize "256x" -}}
-  <img class="header-section-profile-image" src="{{ $image.RelPermalink }}" alt="Profile image">
+  <img class="header-section-profile-image" src="{{ $image.RelPermalink }}" alt="Profile">
   <div class="header-section-tagline">I enjoy thoughtful and experimental work.</div>
-  <a class="social-link" href="https://github.com/squeakyspacebar">{{- partial "fontawesome.html" "github" -}}</a>
-</article>
+  <a class="social-link" href="https://github.com/squeakyspacebar" aria-label="GitHub profile">{{- partial "fontawesome.html" "github" -}}</a>
 </section>
 <section class="about-me-section" id="about-me">
   <h1 class="about-me-section-heading">ABOUT ME</h1>
-  <section class="about-me-subsection" id="about-me-professionally">
+  <div class="about-me-subsection-wrapper">
+    <section class="about-me-subsection" id="about-me-professionally">
       <h2>BREADTH OF EXPERIENCE</h2>
       <p>I've been a full stack developer since the very beginning of my career. My experience has run the gamut of designing and implementing solutions end-to-end across multiple domains front-to-back.</p>
       <h2>CONSCIENTIOUSNESS</h2>
       <p>I seek challenging and meaningful work with opportunities that advance socially positive objectives. I care about craft, discipline, process, and doing things well with an eye toward long-term sustainability, but I am also flexible, anti-dogmatic, mission-driven, and results-oriented.</p>
       <h2>SELF-SUFFICIENCY</h2>
       <p>I have primarily worked in solo-developer and small-team environments with high degrees of flexibility and autonomy, with plenty of experience working in both newly-formed and remote teams. I value independence, am highly self-motivated, and am comfortable with taking the initiative when empowered to do so.</p>
-  </section>
-  <section class="about-me-subsection" id="about-me-personally">
+    </section>
+    <section class="about-me-subsection" id="about-me-personally">
       <h2>WHERE I'M FROM</h2>
       <p>Native Texan born-and-raised.</p>
       <h2>WHERE I'VE BEEN</h2>
@@ -31,5 +30,6 @@
       <p>Science, philosophy, international geopolitics, cinema, various things gustatory and culinary. I enjoy the exploratory: that which is simultaneously experimental, yet grounded.</p>
       <h2>DUMB PERSONALITY STUFF</h2>
       <p><a href="https://www.16personalities.com/intp-personality">INTP</a>, Aquarius, Fire Rabbit (火兔), Ravenclaw.</p>
+    </section>
   </div>
 </section>
