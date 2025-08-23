@@ -80,6 +80,10 @@ h1.main-section-heading {
   font-size: 2rem;
 }
 
+.no-display {
+  display: none;
+}
+
 .flex-break {
   flex-basis: 100%;
   height: 0;
@@ -140,6 +144,16 @@ h1.main-section-heading {
 .work-place-lead {
   color: $titanium-yellow;
   font-weight: 700;
+}
+
+.contact-email {
+  @media (min-width: $screen-lg-min) {
+    text-align: left;
+  }
+
+  flex-basis: 100%;
+  font-size: 1.25rem;
+  text-align: center;
 }
 
 .social-link {
