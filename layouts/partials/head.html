@@ -1,6 +1,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Howdy! I'm Andy Lo — thinker, skeptic, software developer. I enjoy thoughtful and experimental work.">
   <title>{{- if .IsHome -}}{{- .Title -}}{{- else -}}{{- .Site.Title -}} - {{- .Page.Title -}}{{- end -}}</title>
   {{- $scss := resources.Get "sass/main.scss" -}}
   {{- $style := $scss | toCSS | minify | fingerprint -}}
