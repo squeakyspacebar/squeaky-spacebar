@@ -10,7 +10,13 @@
           </h1>
           <span class="work-period">
             {{- .Params.start_year -}}
-            {{- if and (isset .Params "end_year") (ne .Params.start_year .Params.end_year) -}}–{{- .Params.end_year -}}{{- end -}}
+            {{- if (isset .Params "end_year") -}}
+              {{- if (ne .Params.start_year .Params.end_year) -}}
+                –{{- .Params.end_year -}}
+              {{- end -}}
+            {{- else -}}
+              –Current
+            {{- end -}}
           </span>
           <div class="flex-break"></div>
           <div class="work-position">{{- .Params.position -}}</div>
