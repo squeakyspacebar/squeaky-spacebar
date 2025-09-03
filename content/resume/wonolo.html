@@ -6,7 +6,7 @@ end_year = 2023
 +++
 <p>I joined Wonolo as an inaugural member of the newly-formed Build and Release Tools team. At the intersection of <b>build and release engineering</b>, <b>platform engineering</b>, and <b>DevOps</b>, our team’s purview was maintaining and improving the tooling and processes that assisted developers in releasing software more rapidly and more safely.</p>
 <ul>
-  <li>Responsible for stewardship of our <b>CI/CD</b> solution and assisting other developers in utilizing it successfully.</li>
+  <li>Responsible for stewardship of our <b>CI/CD</b> (<b>Buildkite</b>) solution and assisting other developers in utilizing it successfully.</li>
   <li>Frequent liaison between CloudOps (i.e. the infrastructure team) and developer teams.</li>
   <li>Drove and participated in many inter-team discussions to drive best practices, process improvements, and developer experience improvements.</li>
 </ul>
@@ -15,5 +15,5 @@ end_year = 2023
   <li>Designed and implemented a (<b>Ruby</b>) tool for developers to formally document code ownership. The tool parsed multiple sources of truth into ownership trees consisting of files and code objects, reconciled and grafted them into a singular tree, and generated a canonical CODEOWNERS file for GitHub to resolve code ownership.</li>
   <li>Designed and implemented a (<b>Node.js</b>) service that generated recommendations for pull request reviewers to invite based on data from a GitHub repository’s CODEOWNERS file and other custom criteria. The service integrated with any configured GitHub repositories and published recommendation reports as comments on open pull requests.</li>
   <li>Maintained and improved an internal (<b>Python</b>) deployment queue service — integrated between GitHub, Slack, and our CI/CD platform — to assist developers in collaboratively managing builds/deployments. The service handled locking of exclusive deployment resources as well as provided monitoring feedback to inform developers of pipeline progress. Developers interacted with the service through a Slackbot, allowing them to manage deployments with a minimum of additional panel-watching.</li>
-  <li>Wrote many <b>unit and integration tests</b> for all of the above projects.</li>
+  <li>Wrote <b>unit and integration tests</b> for the above projects in a combination of <b>Chai</b> / <b>Mocha</b> / <b>Sinon.js</b>, <b>pytest</b>, and <b>RSpec</b>.</li>
 </ul>
