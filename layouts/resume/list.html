@@ -6,7 +6,7 @@
       <article class="work-card">
         <header class="work-card-header">
           <h1 class="work-place">
-            {{- .Params.place -}}
+            {{- .Params.place | safeHTML -}}
           </h1>
           <span class="work-period">
             {{- .Params.start_year -}}
